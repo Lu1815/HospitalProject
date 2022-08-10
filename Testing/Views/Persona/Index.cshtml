@@ -1,0 +1,27 @@
+﻿@model List<Testing.Models.Clases.PersonaCLS>;
+
+@{
+    ViewData["Title"] = "Persona";
+}
+
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Sexo</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td>@obj.iidPersona</td>
+                <td>@obj.nombreCompleto</td>
+                <td>@obj.email</td>
+                <td>@obj.nombreSexo</td>
+            </tr>
+        }
+    </tbody>
+</table>
